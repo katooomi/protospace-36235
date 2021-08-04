@@ -4,7 +4,6 @@
       <h2 class="page-heading">
         <%= "#{@user.name}さんの情報" %>
       </h2>
-      <% @prototypes.each do |prototype| %>
       <table class="table">
         <tbody>
           <tr>
@@ -25,8 +24,9 @@
           </tr>
         </tbody>
       </table>
+      <% @prototypes.each do |prototype| %>
       <h2 class="page-heading">
-        <%= "#{@user.name}さんのプロトタイプ"%>
+        <%= "#{@user_id}さんのプロトタイプ"%>
       </h2>
       <div class="user__card">
         <%= render partial: "prototypes/prototype", collection: @user.prototypes %> 
